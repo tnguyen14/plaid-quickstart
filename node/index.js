@@ -104,9 +104,10 @@ app.post('/api/create_link_token', function (request, response, next) {
           client_user_id: 'user-id',
         },
         client_name: 'Plaid Quickstart',
-        products: PLAID_PRODUCTS,
+        // products: PLAID_PRODUCTS,
         country_codes: PLAID_COUNTRY_CODES,
         language: 'en',
+        access_token: process.env.ACCESS_TOKEN,
       };
 
       if (PLAID_REDIRECT_URI !== '') {
